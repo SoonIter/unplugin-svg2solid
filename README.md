@@ -1,28 +1,13 @@
-# unplugin-starter
+# unplugin-svg2solidcomp
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
+[![NPM version](https://img.shields.io/npm/v/unplugin-svg2solidcomp?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-svg2solidcomp)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
-
-## Template Usage
-
-To use this template, clone it down using:
-
-```bash
-npx degit antfu/unplugin-starter my-unplugin
-```
-
-And do a global replace of `unplugin-starter` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+svg2solidcomp template for [unplugin](https://github.com/unjs/unplugin).
 
 ## Install
 
 ```bash
-npm i unplugin-starter
+npm i unplugin-svg2solidcomp
 ```
 
 <details>
@@ -30,11 +15,13 @@ npm i unplugin-starter
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-starter/vite'
+import svg2solidcomp from 'unplugin-svg2solidcomp/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    svg2solidcomp({
+      /* options */
+    }),
   ],
 })
 ```
@@ -48,17 +35,18 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-starter/rollup'
+import svg2solidcomp from 'unplugin-svg2solidcomp/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    svg2solidcomp({
+      /* options */
+    }),
   ],
 }
 ```
 
 <br></details>
-
 
 <details>
 <summary>Webpack</summary><br>
@@ -68,26 +56,12 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-starter/webpack')({ /* options */ })
-  ]
-}
-```
-
-<br></details>
-
-<details>
-<summary>Nuxt</summary><br>
-
-```ts
-// nuxt.config.js
-export default {
-  buildModules: [
-    ['unplugin-starter/nuxt', { /* options */ }],
+    require('unplugin-svg2solidcomp/webpack')({
+      /* options */
+    }),
   ],
 }
 ```
-
-> This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
 
 <br></details>
 
@@ -99,7 +73,9 @@ export default {
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-starter/webpack')({ /* options */ }),
+      require('unplugin-svg2solidcomp/webpack')({
+        /* options */
+      }),
     ],
   },
 }
@@ -113,10 +89,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-starter/esbuild'
+import svg2solidcomp from 'unplugin-svg2solidcomp/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [svg2solidcomp()],
 })
 ```
 
