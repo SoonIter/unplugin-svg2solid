@@ -1,14 +1,11 @@
-import { readFileSync } from 'fs';
-import { createUnplugin } from 'unplugin';
-import type { Options } from './types';
-import fs from 'fs';
-import resolve from 'resolve';
-import { SolidCompiler } from './utils/solidCompCompiler';
+import fs, { readFileSync } from 'fs';
 import path from 'path';
+import { createUnplugin } from 'unplugin';
+import resolve from 'resolve';
+import type { Options } from './types';
+import { SolidCompiler } from './utils/solidCompCompiler';
 
-export default createUnplugin<Options>(options => {
-  // let resolveId = '.svg';
-  // let _code = '';
+export default createUnplugin<Options>((options) => {
   const m = new Map<string, string>();
 
   return {
@@ -27,9 +24,8 @@ export default createUnplugin<Options>(options => {
     async load(id: string) {
       const key = [...m.keys()].find(i => i.includes(id));
 
-      if (key) {
+      if (key)
         return { code: SolidCompiler(m.get(key) ?? '') ?? '' };
-      }
     },
   };
 });

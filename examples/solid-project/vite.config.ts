@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import solidPlugin from 'vite-plugin-solid';
-import svgCompiler from 'unplugin-svg-solidcomp/vite';
+import svgCompiler from 'unplugin-svg-solid2comp/vite';
 import Inspect from 'vite-plugin-inspect';
 export default defineConfig({
   plugins: [
