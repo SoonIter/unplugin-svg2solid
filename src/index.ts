@@ -9,7 +9,7 @@ export default createUnplugin<Options>((options) => {
   const m = new Map<string, string>();
 
   return {
-    name: 'unplugin-svg2solidcomp',
+    name: 'unplugin-svg2solid',
     enforce: 'pre',
 
     resolveId(id, importee) {

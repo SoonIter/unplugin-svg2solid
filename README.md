@@ -1,13 +1,13 @@
-# unplugin-svg2solidcomp
+# unplugin-svg2solid
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-svg2solidcomp?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-svg2solidcomp)
+[![NPM version](https://img.shields.io/npm/v/unplugin-svg2solid?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-svg2solid)
 
 svg2solidcomp template for [unplugin](https://github.com/unjs/unplugin).
 
 ## Install
 
 ```bash
-npm i unplugin-svg2solidcomp
+npm i unplugin-svg2solid
 ```
 
 <details>
@@ -15,7 +15,7 @@ npm i unplugin-svg2solidcomp
 
 ```ts
 // vite.config.ts
-import svg2solidcomp from 'unplugin-svg2solidcomp/vite'
+import svg2solidcomp from 'unplugin-svg2solid/vite'
 
 export default defineConfig({
   plugins: [
@@ -35,7 +35,7 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import svg2solidcomp from 'unplugin-svg2solidcomp/rollup'
+import svg2solidcomp from 'unplugin-svg2solid/rollup'
 
 export default {
   plugins: [
@@ -56,7 +56,7 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-svg2solidcomp/webpack')({
+    require('unplugin-svg2solid/webpack')({
       /* options */
     }),
   ],
@@ -73,7 +73,7 @@ module.exports = {
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-svg2solidcomp/webpack')({
+      require('unplugin-svg2solid/webpack')({
         /* options */
       }),
     ],
@@ -89,7 +89,7 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import svg2solidcomp from 'unplugin-svg2solidcomp/esbuild'
+import svg2solidcomp from 'unplugin-svg2solid/esbuild'
 
 build({
   plugins: [svg2solidcomp()],

@@ -10,7 +10,7 @@
   "dependencies": {
     "@solidjs/router": "^0.4.2",
     "solid-js": "^1.4.8",
-    "unplugin-svg-solid2comp": "workspace:*"
+    "unplugin-svg2solid": "workspace:*"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
