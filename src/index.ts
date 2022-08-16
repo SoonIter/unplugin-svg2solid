@@ -1,7 +1,6 @@
-import fs, { readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import path from 'path';
 import { createUnplugin } from 'unplugin';
-import resolve from 'resolve';
 import type { Options } from './types';
 import { SolidCompiler } from './utils/solidCompCompiler';
 
@@ -12,10 +11,10 @@ export default createUnplugin<Options>((options) => {
     name: 'unplugin-svg2solid',
     enforce: 'pre',
 
-    resolveId(id, importee) {
+    resolveId(id, importer) {
       if (id.endsWith('.svg')) {
-        const where = path.resolve(path.dirname(importee as string), id);
-        const code = fs.readFileSync(where, 'utf-8');
+        const where = path.resolve(path.dirname(importer as string), id);
+        const code = readFileSync(where, 'utf-8');
         const resolveId = where.replace('.svg', '.tsx');
         m.set(resolveId, code);
         return resolveId;

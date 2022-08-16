@@ -2,14 +2,28 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-svg2solid?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-svg2solid)
 
+to import svg as Solid-js component
 svg2solidcomp template for [unplugin](https://github.com/unjs/unplugin).
 
-## Install
-
+## Install and Usage
 ```bash
 npm i unplugin-svg2solid
 ```
 
+```jsx
+import Logo from './logo.svg';
+import Logo2 from './logo2.svg';
+
+const App: Component = () => {
+  return (
+    <div>
+      <Logo />
+      <Logo2 />
+    </div>
+  );
+};
+
+```
 <details>
 <summary>Vite</summary><br>
 
@@ -26,7 +40,7 @@ export default defineConfig({
 })
 ```
 
-Example: [`playground/`](./playground/)
+Example: [`example`](./examples/solid-project/)
 
 <br></details>
 
